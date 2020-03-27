@@ -2,11 +2,17 @@
 
 See and search covid19 data in real time
 
-Uses
+For doc to the api
 
-``
+```
 https://documenter.getpostman.com/view/8854915/SzS7R6uu?version=latest
-``
+```
+
+The api github
+
+```
+https://github.com/novelcovid/api
+```
 
 ## Project setup
 ``
