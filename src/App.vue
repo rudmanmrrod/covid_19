@@ -1,22 +1,34 @@
 <template>
   <div id="app">
-    <h1>COVID19 Info</h1><hr>
-    <Stats />
+    <div id="nav">
+      <router-link to="/">Stats</router-link> |
+      <router-link to="/search">Search</router-link> |
+      <router-link to="/">List</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Stats from './components/Stats/Stats.vue'
 
 export default {
-  name: 'App',
-  components: {
-    Stats
-  }
+  name: 'App'
 }
 </script>
 
 <style>
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

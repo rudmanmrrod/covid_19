@@ -16,7 +16,6 @@ export default {
 			.then(response => {
 				this.info = response.data
 				this.info.updated_at = new Date(this.info.updated).toLocaleFormat()
-				
 			})
 		}
 	},

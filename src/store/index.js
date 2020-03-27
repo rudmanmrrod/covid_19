@@ -9,6 +9,9 @@ export default new Vuex.Store({
 	getters: {
 		statsUrl(){
 			return 'https://corona.lmao.ninja/all'
+		},
+		countryUrl: () => (country) => {
+			return 'https://corona.lmao.ninja/countries/'+country
 		}
 	},
 	mutations: {
@@ -20,7 +23,16 @@ export default new Vuex.Store({
 			.then((response) => {
 				return response
 			}).catch((error)=>{
-				return error.response;
+				return error.response
+			})
+		},
+		getContries({ getters },country){
+			return window.axios
+			.get(getters.countryUrl(country))
+			.then((response) => {
+				return response
+			}).catch((error)=>{
+				return error.response
 			})
 		}
 	},
